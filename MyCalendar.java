@@ -56,7 +56,7 @@ public class MyCalendar{
     for (i = 0; i < startDay-1; i++)
       System.out.print("    ");
 
-    for (i = 1; i <= numOfDaysInMonth; i++) {
+    for (i = 1; i <= DaysNumber; i++) {
       //beacuse the numbers less than 10 are smaller than 10 
       if (i < 10)
         System.out.print("   "+i);

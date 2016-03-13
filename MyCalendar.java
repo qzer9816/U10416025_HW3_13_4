@@ -29,4 +29,27 @@ public class MyCalendar{
     calendar.set(Calendar.Date, 1);
     printMonth(year , month);
   }
+  
+  static void printMonth(int year , int month){
+    //get the first day of the week in the month
+    int startDay = getStartDay();
+    //get number of days in the month
+    int DaysNumber = calendar.daysInMonth();
+    //print title
+    printMonthTitle(year , month);
+    //print days of month
+    printMonthBody(startDay , DaysNumber);
+  }
+  
+  static int getStartDay(){
+    return calendar.get(Calendar.DAY_OF_WEEK);
+  }
+  
+  static void printMonthTitle(int year , int month){
+    
+  }
+  
+  static void printMonthBody(int startDay , int DaysNumber){
+    
+  }
 }

@@ -9,7 +9,7 @@ public class MyCalendar{
     
     //if user input error month or year
     if(args.length > 2){
-      system.out.print("only can input month and year");
+      System.out.print("only can input month and year");
     }
     //if user input the true month and year
     else if(args.length == 2){
@@ -46,10 +46,25 @@ public class MyCalendar{
   }
   
   static void printMonthTitle(int year , int month){
-    
+    System.out.println("         "+calendar.getMonthName()+", "+year);
+    System.out.println("-----------------------------");
+    System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
   }
   
   static void printMonthBody(int startDay , int DaysNumber){
-    
+    int i = 0;
+    for (i = 0; i < startDay-1; i++)
+      System.out.print("    ");
+
+    for (i = 1; i <= numOfDaysInMonth; i++) {
+      //beacuse the numbers less than 10 are smaller than 10 
+      if (i < 10)
+        System.out.print("   "+i);
+      else
+        System.out.print("  "+i);
+      if ((i + startDay - 1) % 7 == 0)
+        System.out.println();
+    }
+    System.out.println("");
   }
 }
